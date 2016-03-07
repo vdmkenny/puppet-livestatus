@@ -15,7 +15,8 @@ class livestatus {
         mode   => 755,
         owner  => root,
         group  => root,
-        source => "puppet:///modules/livestatus/livestatus"
+        source => "puppet:///modules/livestatus/livestatus",
+        notify  => Service['xinetd'], 
     }
 
 }
