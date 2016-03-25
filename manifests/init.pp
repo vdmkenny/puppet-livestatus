@@ -19,4 +19,10 @@ class livestatus {
         notify  => Service['xinetd'], 
     }
 
+    firewall{'010 livestatus 6557':
+        dport  => '6557',
+        action => 'accept',
+    }
+
+
 }
